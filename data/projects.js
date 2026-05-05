@@ -1,0 +1,57 @@
+/**
+ * `section`: paginasWeb | fullStack | ciberseguridad | aplicaciones
+ *
+ * Enlaces:
+ * - Usa `links` cuando quieras varios botones (GitHub, PDF, demo, etc.).
+ *   Cada uno: { label: "Texto del botón", url: "..." }
+ * - PDF en local: coloca el archivo en `public/documentos/` y usa
+ *   url: "/documentos/nombre-archivo.pdf"
+ * Si no usas `links`, se muestran `githubUrl` y `liveUrl` como antes.
+ */
+export const projects = [
+  {
+    id: 1,
+    title: "Pala Match",
+    section: "fullStack",
+    description:
+      "Aplicación web con backend y frontend integrados: experiencia completa de usuario y API.",
+    tech: ["Next.js", "Spring Boot", "React"],
+    links: [
+      { label: "Código", url: "https://github.com/usuario/pala-match" },
+      // Descomenta cuando subas el PDF a public/documentos/
+      // { label: "Memoria (PDF)", url: "/documentos/pala-match-memoria.pdf" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Mejora de seguridad para LexCorp (ficticio)",
+    section: "ciberseguridad",
+    description:
+      "Auditoria a LexCorp sobre ataque de malware, las acciones llevadas a cabo y la seguridad de la empresa.",
+    tech: ["VirusTotal", "KaliLinux", "WireShark", "Powershell"],
+    links: [
+      {
+        label: "Informe de auditoria",
+        url: "public\documentos\PF + Ligonie Wertmiller Benjamin.pdf",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Capacitación de ciberseguridad",
+    section: "ciberseguridad",
+    description:
+      "Capacitación de ciberseguridad para la consultoria STRATIO orientada a Phishing e IA utilizada para Phishing.",
+    tech: ["Phishing", "IA"],
+    links: [{ label: "Informe", url: "public\documentos\Informe Ciberseguridad final.pdf" }],
+  },
+  {
+    id: 4,
+    title: "Página web para IUSVG",
+    section: "paginasWeb",
+    description:
+      "Página web informativa que cuenta con los servicios que ofrecen, los miembros y un boton de whatsapp para tener un contacto directo.",
+    tech: ["HTML", "CSS"],
+    links: [{ label: "Página", url: "https://ius-vg.vercel.app/" }],
+  },
+];

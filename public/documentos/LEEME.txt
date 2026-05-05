@@ -1,0 +1,7 @@
+Coloca aquí tus PDFs.
+
+Ejemplos usados en data/projects.js (ajusta los nombres o los datos):
+- informe-auditoria.pdf
+- cv-flow.pdf
+
+Las URLs en el código serán: /documentos/nombre-del-archivo.pdf
