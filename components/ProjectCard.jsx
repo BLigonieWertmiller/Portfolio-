@@ -26,6 +26,15 @@ function isValidUrl(url) {
   return true;
 }
 
+/** `next/link` no conviene para http(s) ni PDFs estáticos: usar <a> nativo. */
+function shouldUseNativeAnchor(url) {
+  if (!url) return true;
+  const u = url.trim();
+  if (/^https?:\/\//i.test(u)) return true;
+  if (/\.pdf(\?|#|$)/i.test(u)) return true;
+  return false;
+}
+
 /** Prioridad: array `links`; si no hay, `githubUrl` + `liveUrl` legacy. */
 function getLinks(project) {
   if (Array.isArray(project.links) && project.links.length > 0) {
@@ -72,18 +81,37 @@ export default function ProjectCard({ project, sectionKey }) {
           ))}
         </div>
         <div className="flex flex-wrap gap-4 mt-auto pt-4 border-t border-slate-800/60">
-          {links.map(({ label, url }) => (
-            <Link
-              key={`${label}-${url}`}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-slate-200 hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5"
-            >
-              {label}
-              <span aria-hidden>↗</span>
-            </Link>
-          ))}
+          {links.map(({ label, url }) => {
+            const className =
+              "text-sm font-medium text-slate-200 hover:text-cyan-400 transition-colors inline-flex items-center gap-1.5";
+            const inner = (
+              <>
+                {label}
+                <span aria-hidden>↗</span>
+              </>
+            );
+            return shouldUseNativeAnchor(url) ? (
+              <a
+                key={`${label}-${url}`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link
+                key={`${label}-${url}`}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {inner}
+              </Link>
+            );
+          })}
           {links.length === 0 && (
             <span className="text-xs text-slate-500">
               Añade enlaces en <code className="text-slate-600">links</code> o quita

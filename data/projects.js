@@ -17,6 +17,7 @@ export const projects = [
       "Aplicación web con backend y frontend integrados: experiencia completa de usuario y API.",
     tech: ["Next.js", "Spring Boot", "React"],
     links: [
+      // Debe ser un repo público real; si no, GitHub mostrará 404.
       { label: "Código", url: "https://github.com/usuario/pala-match" },
       // Descomenta cuando subas el PDF a public/documentos/
       // { label: "Memoria (PDF)", url: "/documentos/pala-match-memoria.pdf" },
@@ -32,7 +33,7 @@ export const projects = [
     links: [
       {
         label: "Informe de auditoria",
-        url: "public\documentos\PF + Ligonie Wertmiller Benjamin.pdf",
+        url: "/documentos/PF%20%2B%20Ligonie%20Wertmiller%20Benjamin.pdf",
       },
     ],
   },
@@ -43,7 +44,12 @@ export const projects = [
     description:
       "Capacitación de ciberseguridad para la consultoria STRATIO orientada a Phishing e IA utilizada para Phishing.",
     tech: ["Phishing", "IA"],
-    links: [{ label: "Informe", url: "public\documentos\Informe Ciberseguridad final.pdf" }],
+    links: [
+      {
+        label: "Informe",
+        url: "/documentos/Informe%20Ciberseguridad%20final.pdf",
+      },
+    ],
   },
   {
     id: 4,
