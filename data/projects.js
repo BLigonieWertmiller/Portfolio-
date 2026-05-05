@@ -17,8 +17,7 @@ export const projects = [
       "Aplicación web con backend y frontend integrados: experiencia completa de usuario y API.",
     tech: ["Next.js", "Spring Boot", "React"],
     links: [
-      // Debe ser un repo público real; si no, GitHub mostrará 404.
-      { label: "Código", url: "https://github.com/usuario/pala-match" },
+      { label: "Código", url: "https://github.com/BLigonieWertmiller/pala-match" },
       // Descomenta cuando subas el PDF a public/documentos/
       // { label: "Memoria (PDF)", url: "/documentos/pala-match-memoria.pdf" },
     ],
