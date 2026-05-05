@@ -38,8 +38,7 @@ export const SECTIONS = [
 function EmptySection({ label }) {
   return (
     <p className="text-slate-500 text-sm italic border border-dashed border-slate-800 rounded-xl px-6 py-10 text-center bg-slate-900/40">
-      Aún no hay proyectos en «{label}». Añade uno en{" "}
-      <code className="text-slate-400 text-xs">data/projects.js</code>.
+      Aún no hay proyectos publicados en «{label}». Próximamente.
     </p>
   );
 }
