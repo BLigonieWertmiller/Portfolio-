@@ -59,4 +59,19 @@ export const projects = [
     tech: ["HTML", "CSS"],
     links: [{ label: "Página", url: "https://ius-vg.vercel.app/" }],
   },
+  {
+    id: 5,
+    title: "Escobar Propiedades y Arte",
+    section: "fullStack",
+    description:
+      "Plataforma para inmobiliaria y galería de arte: publicación y gestión de propiedades y obras, panel de administración con login y carga de imágenes.",
+    tech: ["React", "Vite", "Node.js", "Express", "Supabase"],
+    links: [
+      { label: "Página", url: "https://escobar-propiedades-y-arte.vercel.app/" },
+      {
+        label: "Código",
+        url: "https://github.com/BLigonieWertmiller/Escobar-Propiedades-y-Arte",
+      },
+    ],
+  },
 ];
