@@ -74,4 +74,16 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "Celébrame",
+    section: "fullStack",
+    description:
+      "Plataforma de invitaciones digitales: plantillas personalizables con fotos, colores, música y secciones a gusto, con cobro por invitación vía Mercado Pago y creación de tarjetas sin necesidad de registro.",
+    tech: ["Next.js", "React", "TypeScript", "Supabase", "Mercado Pago"],
+    links: [
+      { label: "Página", url: "https://celebrame.com.ar/" },
+      { label: "Código", url: "https://github.com/BLigonieWertmiller/sobrecito" },
+    ],
+  },
 ];
